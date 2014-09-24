@@ -7,9 +7,56 @@
 //
 
 #include <stdio.h>
+#include <stdbool.h>
+#import "variablesForZigzag.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+void whereAndWhatToPrint () {
+    
+    periodValue();
+    if (zigZagB() && zigZagA()) {
+        printf("&");
+    }
+    
+    else if (zigZagA()){
+        printf("*");
+    }
+    
+    else if (zigZagB()) {
+        printf("+");
+    }
+    
+    else {
+        printf(" ");
+    }
+    
+    nPeriod(x);
+    mPeriod(x);
+    
+}
+
+
+int main() {
+    
+    printf("Enter height:");
+    scanf("%d", &height);
+    
+    printf("Enter offset A:");
+    scanf("%d", &offsetA);
+    
+    printf("Enter offset B:");
+    scanf("%d", &offsetB);
+    
+    for (y = 1 ; y < height + 1; y++) {
+        
+        n = 0;
+        m = 0;
+        
+        for (x = 1 ; x < 40 ; x++) {
+            
+            whereAndWhatToPrint();
+  
+        }
+        
+        printf("\n");
+    }
 }
